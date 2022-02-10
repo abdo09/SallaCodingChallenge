@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/layout-sw600dp/brand_item.xml" value="0.33" />
+        <entry key="app/src/main/res/layout-sw600dp/fragment_product_details.xml" value="0.55" />
+        <entry key="app/src/main/res/layout-sw720dp/brand_item.xml" value="0.158203125" />
+        <entry key="app/src/main/res/layout-sw720dp/fragment_product_details.xml" value="0.4666666666666667" />
+        <entry key="app/src/main/res/layout/brand_item.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/fragment_brands.xml" value="0.32222222222222224" />
+        <entry key="app/src/main/res/layout/fragment_product_details.xml" value="0.3227848101265823" />
+        <entry key="app/src/main/res/layout/prgress_dialog_layout.xml" value="0.30833333333333335" />
+        <entry key="app/src/main/res/layout/product_view_pager_item.xml" value="0.3111111111111111" />
+        <entry key="app/src/main/res/layout/toolbar.xml" value="0.30833333333333335" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.165" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

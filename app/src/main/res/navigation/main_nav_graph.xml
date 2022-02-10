@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/brandsFragment">
+
+    <fragment
+        android:id="@+id/brandsFragment"
+        android:name="com.coding.challenge.ui.brands.BrandsFragment"
+        android:label="fragment_brands"
+        tools:layout="@layout/fragment_brands" >
+        <action
+            android:id="@+id/action_brandsFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment"
+            app:enterAnim="@anim/slide_in_to_left"
+            app:exitAnim="@anim/slide_out_from_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/productDetailsFragment"
+        android:name="com.coding.challenge.ui.productDetails.ProductDetailsFragment"
+        android:label="fragment_product_details"
+        tools:layout="@layout/fragment_product_details" >
+        <action
+            android:id="@+id/action_productDetailsFragment_to_brandsFragment"
+            app:destination="@id/brandsFragment"
+            app:enterAnim="@anim/slide_in_to_right"
+            app:exitAnim="@anim/slide_out_from_left" />
+        <argument
+            android:name="product"
+            app:argType="com.coding.challenge.data.dto.Data"
+            app:nullable="true" />
+    </fragment>
+
+
+</navigation>

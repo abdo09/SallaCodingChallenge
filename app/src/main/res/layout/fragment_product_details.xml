@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="productDetails"
+            type="com.coding.challenge.data.dto.ProductDetailsResponse" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/view_pager_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginTop="@dimen/thirty_dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/sliding_view_pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/sixteen_dp"
+                        android:orientation="horizontal"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/armani_banner"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:listitem="@layout/product_view_pager_item" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="200dp">
+
+                    <com.coding.challenge.ui.common.CustomTextView
+                        android:id="@+id/custom_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible" />
+
+                </LinearLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_details"
+                    style="@style/MyCardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view_pager_container"
+                    android:layout_marginTop="@dimen/sixteen_dp"
+                    android:visibility="gone"
+                    app:cardElevation="@dimen/twelve_dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/view_pager_container">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/product_details_img_logo"
+                            loadImageFromUrl="@{productDetails.productDetailsData.productDetailsDataBrand.logo}"
+                            android:layout_width="@dimen/seventy_five_dp"
+                            android:layout_height="@dimen/seventy_five_dp"
+                            android:layout_marginStart="@dimen/sixteen_dp"
+                            android:layout_marginTop="@dimen/sixteen_dp"
+                            android:layout_marginBottom="@dimen/sixteen_dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/product_name_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/sixteen_dp"
+                            android:layout_marginEnd="@dimen/sixteen_dp"
+                            android:text="@{productDetails.productDetailsData.name}"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sixteen_sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/buy_now_pay_now_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/eight_dp"
+                            android:layout_marginEnd="@dimen/sixteen_dp"
+                            android:text="@string/payNow"
+                            android:textSize="@dimen/fourteen_sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/product_name_tv" />
+
+                        <TextView
+                            android:id="@+id/product_price_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/eight_dp"
+                            android:layout_marginEnd="@dimen/sixteen_dp"
+                            android:text="@{`SAR ` + productDetails.productDetailsData.price.amount.toString()}"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/fourteen_sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/buy_now_pay_now_tv" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

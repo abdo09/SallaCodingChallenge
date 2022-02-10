@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Coding challenge</string>
+
+    <string name="success">Successfully</string>
+    <string name="error">Error</string>
+    <string name="info">Information</string>
+    <string name="pref_first_time">pref_first_time</string>
+    <string name="pref_language">pref_language</string>
+    <string name="pref_uid">pref_uid</string>
+    <string name="pref_device_id">pref_device_id</string>
+    <string name="pref_access_token">pref_access_token</string>
+    <string name="pref_refresh_token">pref_refresh_token</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="network_error">Network error</string>
+    <string name="retry">Retry</string>
+    <string name="internet_not_available">Internet not available</string>
+    <string name="lang_key">langa</string>
+    <string name="press_back_again_to_exit">Press back again to exit</string>
+    <string name="pref_is_tablet">pref_is_tablet</string>
+    <string name="payNow">اشتري الان وادفع الان</string>
+
+</resources>
